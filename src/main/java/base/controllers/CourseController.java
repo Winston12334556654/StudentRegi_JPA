@@ -28,4 +28,12 @@ public class CourseController {
         return "redirect:/courseView";
     }
 
+    @GetMapping("/courseView")
+    public String showAllCourses(Model model){
+        model.addAttribute("courses" , courseDao.getAllCourses());
+        return "course/course_view";
+    }
+
+
+
 }

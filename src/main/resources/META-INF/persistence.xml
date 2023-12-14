@@ -8,7 +8,8 @@
     <!-- Define persistence unit -->
     <persistence-unit name="Student_Registration_SpringJpa">
         <class>base.models.User</class>
-
+        <class>base.models.Course</class>
+        <class>base.models.Student</class>
 
         <properties>
             <!-- database connection -->
