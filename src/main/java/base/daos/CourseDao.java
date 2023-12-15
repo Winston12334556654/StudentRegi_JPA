@@ -47,15 +47,15 @@ public class CourseDao {
     }
 
     //get course by id
-    public Course findUserById(String userId) {
+    public Course findCourseById(String id) {
         EntityManager entityManager = null;
         Course course;
         try {
             entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
-            course = entityManager.find(Course.class, userId);
+            course = entityManager.find(Course.class, id);
             if (course == null) {
                 // Handle the case where the user is not found, e.g., throw an exception
-                throw new EntityNotFoundException("User not found with ID: " + userId);
+                throw new EntityNotFoundException("Course not found with ID: " + id);
             }
         } finally {
             if (entityManager != null && entityManager.isOpen()) {
@@ -127,6 +127,7 @@ public class CourseDao {
         }
         return deleteResult;
     }
+
 
 
     //get course Id

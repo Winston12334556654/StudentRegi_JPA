@@ -15,14 +15,7 @@ public class Course {
     @NotBlank
     private String name;
 
-    @ManyToMany(fetch= FetchType.LAZY,
-            cascade= {CascadeType.PERSIST, CascadeType.MERGE,
-                    CascadeType.DETACH, CascadeType.REFRESH})
-    @JoinTable(
-            name="course_student",
-            joinColumns=@JoinColumn(name="course_id"),
-            inverseJoinColumns=@JoinColumn(name="student_id")
-    )
+    @ManyToMany(mappedBy = "courses")
     private List<Student> students;
 
     public Course() {

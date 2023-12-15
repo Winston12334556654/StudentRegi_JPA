@@ -22,8 +22,13 @@ public class Student {
     private String education ;
     private String photo ;
 
+    @Transient
+    private List<String> courseIds;
+
+
+    //CascadeType.PERSIST
     @ManyToMany(fetch=FetchType.LAZY,
-            cascade= {CascadeType.PERSIST, CascadeType.MERGE,
+            cascade= { CascadeType.MERGE,
                     CascadeType.DETACH, CascadeType.REFRESH})
     @JoinTable(
             name="course_student",
@@ -110,6 +115,14 @@ public class Student {
         this.courses = courses;
     }
 
+    public List<String> getCourseIds() {
+        return courseIds;
+    }
+
+    public void setCourseIds(List<String> courseIds) {
+        this.courseIds = courseIds;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -120,7 +133,9 @@ public class Student {
                 ", phone='" + phone + '\'' +
                 ", education='" + education + '\'' +
                 ", photo='" + photo + '\'' +
+                ", courses=" + courses +
                 ", file=" + file +
+                ", courseIDs=" + courseIds +
                 '}';
     }
 }

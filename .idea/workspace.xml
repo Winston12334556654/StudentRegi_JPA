@@ -8,11 +8,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ddddbb96-30c7-498b-b9a7-f15a05667d22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudRegJpa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudRegJpa.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/CourseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/models/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_reg.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/models/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_reg.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/daos/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/daos/CourseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/models/Student.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +68,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -178,6 +187,10 @@
       <workItem from="1702513572228" duration="1641000" />
       <workItem from="1702529395278" duration="28000" />
       <workItem from="1702531185047" duration="675000" />
+      <workItem from="1702537154177" duration="7312000" />
+      <workItem from="1702562420501" duration="3655000" />
+      <workItem from="1702601193721" duration="4064000" />
+      <workItem from="1702608072835" duration="3173000" />
     </task>
     <servers />
   </component>

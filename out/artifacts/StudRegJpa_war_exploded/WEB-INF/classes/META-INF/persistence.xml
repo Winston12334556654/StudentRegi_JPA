@@ -10,7 +10,7 @@
         <class>base.models.User</class>
         <class>base.models.Course</class>
         <class>base.models.Student</class>
-        
+
         <properties>
             <!-- database connection -->
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
