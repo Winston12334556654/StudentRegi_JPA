@@ -82,7 +82,7 @@
             <div class="col-md-4">
                 <c:forEach items="${courses}" var="course">
                     <div class="form-check-inline col-md-2">
-                        <form:checkbox class="form-check-input"  path="courses" id="gridRadios1" value="${course.id}"/>
+                        <form:checkbox class="form-check-input"  path="courseIds" id="gridRadios1" value="${course.id}"  />
                         <label class="form-check-label" for="gridRadios1">
                                 ${course.name}
                         </label>
