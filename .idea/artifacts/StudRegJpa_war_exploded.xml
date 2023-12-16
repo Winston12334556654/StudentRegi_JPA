@@ -7,6 +7,7 @@
         <element id="directory" name="classes">
           <element id="module-output" name="StudRegJpa" />
           <element id="jpa-descriptors" facet="StudRegJpa/jpa/JPA" />
+          <element id="module-output" name="StudentRegi_JPA" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
@@ -56,6 +57,7 @@
           <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:4.0.2" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="StudentRegi_JPA/web/Web" />
     </root>
   </artifact>
 </component>
