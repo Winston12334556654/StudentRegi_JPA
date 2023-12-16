@@ -78,23 +78,42 @@
                 <legend class="col-form-label col-md-2 pt-0">Attend</legend>
                 <div class="col-md-4">
 
-                    <c:forEach items="${courses}" var="course">
-                        <div class="form-check-inline col-md-2">
-                            <form:checkbox class="form-check-input"  path="courses" id="gridRadios1" value="${course.id}"  />
-                            <label class="form-check-label" for="gridRadios1">
-                                    ${course.name}
-                            </label>
-                        </div>
-                    </c:forEach>
+<%--                    &lt;%&ndash;courses by course table&ndash;%&gt;--%>
+<%--                    <c:forEach items="${courses}" var="course">--%>
+<%--                        <div class="form-check-inline col-md-2">--%>
+<%--                            <form:checkbox class="form-check-input"  path="courses" id="gridRadios1" value="${course.id}"  />--%>
+<%--                            <label class="form-check-label" for="gridRadios1">--%>
+<%--                                    ${course.name}--%>
+<%--                            </label>--%>
+<%--                        </div>--%>
+<%--                    </c:forEach>--%>
 
-                    <c:forEach items="${student.courses}" var="course">
-                        <div class="form-check-inline col-md-2">
-                            <form:checkbox class="form-check-input"  path="courses" id="gridRadios1" value="${course.id}"  />
-                            <label class="form-check-label" for="gridRadios1">
-                                    ${course.name}
-                            </label>
-                        </div>
-                    </c:forEach>
+<%--                    &lt;%&ndash;courses form student&ndash;%&gt;--%>
+<%--                    <c:forEach items="${student.courses}" var="course">--%>
+<%--                        <div class="form-check-inline col-md-2">--%>
+<%--                            <form:checkbox class="form-check-input"  path="courses" id="gridRadios1" value="${course.id}"  />--%>
+<%--                            <label class="form-check-label" for="gridRadios1">--%>
+<%--                                    ${course.name}--%>
+<%--                            </label>--%>
+<%--                        </div>--%>
+<%--                    </c:forEach>--%>
+
+        <%-- Combine courses from course table and student's selected courses --%>
+        <c:set var="allCourses" value="${courses}" />
+        <c:forEach items="${student.courses}" var="selectedCourse">
+            <c:if test="${!fn:contains(allCourses, selectedCourse)}">
+                <c:set var="allCourses" value="${allCourses + selectedCourse}" />
+            </c:if>
+        </c:forEach>
+
+        <%-- Display checkboxes for all courses --%>
+        <c:forEach items="${courses}" var="course">
+            <div class="form-check-inline col-md-2">
+                <input type="checkbox" class="form-check-input" name="courseIds" id="gridRadios1" value="${course.id}"
+                    ${fn:contains(student.courses, course) ? 'checked' : ''} />
+                <label class="form-check-label" for="gridRadios1">${course.name}</label>
+            </div>
+        </c:forEach>
 
                 </div>
             </fieldset>

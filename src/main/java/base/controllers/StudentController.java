@@ -74,8 +74,19 @@ public class StudentController {
         model.addAttribute("student",student);
         return "student/stud_detail";
     }
-    @PostMapping("/studDetail")
+    @PostMapping("/studUpdate")
     public String updateStudent(@ModelAttribute("student")Student student){
+        List<Course> courses = new ArrayList<>();
+        List<String> courseIds = student.getCourseIds();
+        for (String courseId : courseIds){
+
+            //find the course that concern with single course id
+            Course course = cDao.findCourseById(courseId);
+            //add single course to courses list
+            courses.add(course);
+        }
+        //add courses list to student object back
+        student.setCourses(courses);
         int result = sDao.updateStudent(student);
         return "redirect:/studView";
     }
