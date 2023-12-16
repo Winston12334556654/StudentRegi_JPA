@@ -53,8 +53,10 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Photo</th>
+                    <th scope="col">Date of Birth</th>
                     <th scope="col">Courses</th>
                     <th scope="col">Details</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -63,14 +65,13 @@
                         <th scope="row">${loop.index+1}</th>
                         <td>${stud.name}</td>
                         <td><img src="../assets/imgs/${stud.photo}" alt="no photo" width="60px" height="60px"></td>
+                        <td>${stud.dob}</td>
                         <!-- Iterate through courses and display without brackets -->
                         <td>
                             <c:forEach items="${stud.courses}" var="course" varStatus="courseLoop">
-                                ${fn:trim(course)}<c:if test="${!courseLoop.last}">, </c:if>
+                                ${fn:trim(course.name)}<c:if test="${!courseLoop.last}">, </c:if>
                             </c:forEach>
                         </td>
-
-                        <td>
                         <td>
                             <a href="/studDetail?id=${stud.id}"><button type="submit" class="btn btn-secondary mb-2">See More</button></a>
                         </td>
