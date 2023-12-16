@@ -22,13 +22,14 @@
                 <p style="color: red">${msg}</p>
             </div>
         </div>
-        <form:form class="login-form" action="/login" method="post" modelAttribute="user">
-            <form:input type="text" placeholder="Email"    path="email"/>
-            <form:input type="password" placeholder="Password"  path="password"/>
-            <button type="submit"> login</button>
+        <form:form class="login-form" action="/login" method="post" modelAttribute="user" onsubmit="return loginFormValidation()" >
+            <form:input type="text" id="email" placeholder="Email"    path="email"/>
+            <form:input type="password" id="email" placeholder="Password"  path="password"/>
+            <button type="submit" > login</button>
             <p class="message">Not registered? <a href="/userReg">Create an account</a></p>
         </form:form>
     </div>
 </div>
 </body>
+<script src="../assets/js/login.js"></script>
 </html>
