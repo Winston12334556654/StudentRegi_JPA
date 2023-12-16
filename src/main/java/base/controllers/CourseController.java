@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class CourseController {
@@ -33,6 +34,19 @@ public class CourseController {
         model.addAttribute("courses" , courseDao.getAllCourses());
         return "course/course_view";
     }
+
+    @GetMapping("/courseUpdate")
+    public String getCourseEditForm(@RequestParam("id")String id , Model model){
+        Course  course = courseDao.findCourseById(id);
+        model.addAttribute("course",course);
+        return "course/course_detail";
+    }
+    @PostMapping("/courseUpdate")
+    public String updateCourse(@ModelAttribute("course")Course course ){
+        int result = courseDao.updateCourse(course);
+        return "redirect:/courseView";
+    }
+
 
 
 

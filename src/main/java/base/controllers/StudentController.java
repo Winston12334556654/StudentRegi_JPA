@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +33,7 @@ public class StudentController {
         model.addAttribute("student",student);
         return "student/stud_reg";
     }
+
     @PostMapping("studReg")
     public String registerStudent(@ModelAttribute("student")Student student ){
 
@@ -57,6 +57,27 @@ public class StudentController {
 
         int result =  sDao.createStudent(student);
         return "student/stud_view";
+    }
+
+    @GetMapping("/studView")
+    public String displayStudents(Model model){
+        List<Student> students = sDao.getAllStudent();
+        model.addAttribute("student",new Student());
+        model.addAttribute("students",students);
+        return "student/stud_view";
+    }
+
+    @GetMapping("/studDetail")
+    public String getStudentDetailForm(@RequestParam("id")String id , Model model){
+        Student student = sDao.findStudentById(id);
+        model.addAttribute("courses",cDao.getAllCourses());
+        model.addAttribute("student",student);
+        return "student/stud_detail";
+    }
+    @PostMapping("/studDetail")
+    public String updateStudent(@ModelAttribute("student")Student student){
+        int result = sDao.updateStudent(student);
+        return "redirect:/studView";
     }
 
 

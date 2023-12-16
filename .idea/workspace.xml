@@ -8,19 +8,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ddddbb96-30c7-498b-b9a7-f15a05667d22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/CourseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/models/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_reg.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/StudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/CourseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/models/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_reg.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/daos/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/daos/CourseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/models/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/controllers/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/controllers/CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/controllers/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/controllers/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/daos/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/daos/StudentDao.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +190,11 @@
       <workItem from="1702537154177" duration="7312000" />
       <workItem from="1702562420501" duration="3655000" />
       <workItem from="1702601193721" duration="4064000" />
-      <workItem from="1702608072835" duration="3173000" />
+      <workItem from="1702608072835" duration="6043000" />
+      <workItem from="1702630909236" duration="1325000" />
+      <workItem from="1702679724983" duration="263000" />
+      <workItem from="1702693900859" duration="3200000" />
+      <workItem from="1702706276633" duration="920000" />
     </task>
     <servers />
   </component>

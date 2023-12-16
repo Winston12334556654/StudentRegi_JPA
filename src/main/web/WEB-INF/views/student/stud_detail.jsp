@@ -78,21 +78,21 @@
                 <legend class="col-form-label col-md-2 pt-0">Attend</legend>
                 <div class="col-md-4">
 
-                    <c:forEach items="${courses}" var="course" varStatus="loop">
+                    <%--courses by course table--%>
+                    <c:forEach items="${courses}" var="course">
                         <div class="form-check-inline col-md-2">
-                            <c:choose>
-                                <c:when test="${fn:length(courseByStud) > 0}">
-                                    <c:forEach items="${courseByStud}" var="selectedCourse">
-                                        <input type="checkbox" class="form-check-input" id="gridRadios${loop.index}" name="courses" value="${course.id}"
-                                                <c:if test="${course.id eq selectedCourse.id}"> checked="checked" </c:if>
-                                        />
-                                    </c:forEach>
-                                </c:when>
-                                <c:otherwise>
-                                    <input type="checkbox" class="form-check-input" id="gridRadios${loop.index}" name="courses" value="${course.id}"/>
-                                </c:otherwise>
-                            </c:choose>
-                            <label class="form-check-label" for="gridRadios${loop.index}">
+                            <form:checkbox class="form-check-input"  path="courses" id="gridRadios1" value="${course.id}"  />
+                            <label class="form-check-label" for="gridRadios1">
+                                    ${course.name}
+                            </label>
+                        </div>
+                    </c:forEach>
+
+                    <%--courses form student--%>
+                    <c:forEach items="${student.courses}" var="course">
+                        <div class="form-check-inline col-md-2">
+                            <form:checkbox class="form-check-input"  path="courses" id="gridRadios1" value="${course.id}"  />
+                            <label class="form-check-label" for="gridRadios1">
                                     ${course.name}
                             </label>
                         </div>
