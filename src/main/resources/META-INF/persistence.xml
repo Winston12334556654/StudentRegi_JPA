@@ -4,7 +4,7 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-
+branch
     <!-- Define persistence unit -->
     <persistence-unit name="Student_Registration_SpringJpa">
         <class>base.models.User</class>

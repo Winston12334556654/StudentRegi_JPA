@@ -13,6 +13,7 @@
 
     <mvc:resources mapping="/assets/**" location="/WEB-INF/assets/" />
 
+
     <!--    Define Spring MVC View Resolver-->
     <bean id="viewResolver"  class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
         <property name="prefix" value="/WEB-INF/views/" />

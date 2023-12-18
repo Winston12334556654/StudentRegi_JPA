@@ -22,12 +22,15 @@
                 <p style="color: red">${msg}</p>
             </div>
         </div>
-        <form:form class="login-form" action="/login" method="post" modelAttribute="user" onsubmit="return loginFormValidation()" >
+        <form:form class="login-form" action="/login" method="post" modelAttribute="user"  >
+            <div id="email_errormessage" class="text-danger" style="color : red"></div>
             <form:input type="text" id="email" placeholder="Email"    path="email"/>
-            <form:input type="password" id="email" placeholder="Password"  path="password"/>
+            <div id="password_errormessage" class="text-danger"  style="color : red"></div>
+            <form:input type="password" id="password" placeholder="Password"  path="password"/>
             <button type="submit" > login</button>
-            <p class="message">Not registered? <a href="/userReg">Create an account</a></p>
+
         </form:form>
+        <p class="message">Not registered? <a href="/userReg">Create an account</a></p>
     </div>
 </div>
 </body>
