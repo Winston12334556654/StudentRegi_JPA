@@ -55,6 +55,12 @@
           <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.0" />
           <element id="library" level="project" name="Maven: org.eclipse.angus:angus-activation:2.0.1" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:4.0.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.5.2" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="StudentRegi_JPA/web/Web" />

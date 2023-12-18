@@ -10,6 +10,7 @@
 
     <!--    Add Support For Conversion ,Formatting and Validation support-->
     <mvc:annotation-driven />
+
     <mvc:resources mapping="/assets/**" location="/WEB-INF/assets/" />
 
     <!--    Define Spring MVC View Resolver-->

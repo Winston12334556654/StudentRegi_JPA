@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class UserController {
 
@@ -56,6 +58,25 @@ public class UserController {
     public String userDelete(@RequestParam("id")String id ){
         int result =  userDao.deleteUser(id);
         return "redirect:/userView";
+    }
+
+    @PostMapping("/userView/search")
+    public String searchingUser(@ModelAttribute("user")User user , Model model){
+        List<User> users;
+        if(!user.getId().isEmpty()){
+            users = userDao.searchUserById(user.getId());
+            model.addAttribute("users",users);
+            return "user/user_view";
+        }
+        else if(!user.getName().isEmpty()){
+            users = userDao.searchUsersByName(user.getName());
+            model.addAttribute("users",users);
+            System.out.println("There:");
+            return "user/user_view";
+        }
+        else {
+            return "redirect:/userView";
+        }
     }
 
 }
