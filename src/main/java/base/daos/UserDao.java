@@ -140,6 +140,69 @@ public class UserDao {
     }
 
 
+    //search user by name
+    public List<User> searchUsersByName(String name) {
+        List<User> users = new ArrayList<>();
+        EntityManager entityManager = null;
+        try {
+            if (name == null) {
+                throw new IllegalArgumentException("Name parameter cannot be null");
+            }
+            entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+            entityManager.getTransaction().begin();
+
+            try {
+                // Using JPA query to select users by name
+                Query query = entityManager.createQuery("SELECT u FROM User u WHERE LOWER(u.name) LIKE :name");
+                query.setParameter("name", "%" + name.toLowerCase() + "%");
+
+                // Execute the query and get the result list
+                List<User> resultList = query.getResultList();
+
+                // Add the result entities to the list
+                users.addAll(resultList);
+            } finally {
+                entityManager.getTransaction().commit();
+            }
+        } catch (Exception e) {
+            System.err.println("Searching user by name failed: " + e.getMessage());
+            e.printStackTrace();
+            if (entityManager != null && entityManager.getTransaction().isActive()) {
+                entityManager.getTransaction().rollback();
+            }
+        } finally {
+            if (entityManager != null) {
+                entityManager.close();
+            }
+        }
+        return users;
+    }
+
+    //search user by id
+    public List<User> searchUserById(String userId) {
+        List<User> users = new ArrayList<>();
+        EntityManager entityManager = null;
+
+        try {
+            entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+            User user = entityManager.find(User.class, userId);
+
+            if (user != null) {
+                users.add(user);
+            } else {
+                // Handle the case where the user is not found, e.g., throw an exception
+                throw new EntityNotFoundException("User not found with ID: " + userId);
+            }
+        } finally {
+            if (entityManager != null && entityManager.isOpen()) {
+                entityManager.close();
+            }
+        }
+
+        return users;
+    }
+
+
 
 
     //get user Id

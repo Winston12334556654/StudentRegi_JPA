@@ -7,12 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddddbb96-30c7-498b-b9a7-f15a05667d22" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/StudRegJpa_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/StudRegJpa_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/CourseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/StudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/student/stud_view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/student/stud_view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/user/user_view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/user/user_view.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/base/controllers/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/controllers/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/daos/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/daos/CourseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/daos/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/daos/StudentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/daos/UserDao.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,17 +78,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../corejava-test" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Project\OJT-11\StudRegJpa\src\main\web\WEB-INF" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Project\OJT-11\StudRegJpa\src\main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\OJT-11\StudRegJpa\src\main\web\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -186,7 +203,15 @@
       <workItem from="1702630909236" duration="1325000" />
       <workItem from="1702679724983" duration="263000" />
       <workItem from="1702693900859" duration="3200000" />
-      <workItem from="1702706276633" duration="6563000" />
+      <workItem from="1702706276633" duration="7006000" />
+      <workItem from="1702719376905" duration="401000" />
+      <workItem from="1702720760796" duration="468000" />
+      <workItem from="1702731426891" duration="9675000" />
+      <workItem from="1702748635179" duration="1119000" />
+      <workItem from="1702793984603" duration="1244000" />
+      <workItem from="1702801090043" duration="138000" />
+      <workItem from="1702813463991" duration="5567000" />
+      <workItem from="1702853527951" duration="7554000" />
     </task>
     <servers />
   </component>

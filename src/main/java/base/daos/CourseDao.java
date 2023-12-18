@@ -8,6 +8,7 @@ import jakarta.persistence.Query;
 import org.springframework.stereotype.Component;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component

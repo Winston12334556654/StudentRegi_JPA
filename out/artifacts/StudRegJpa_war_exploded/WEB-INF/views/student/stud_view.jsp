@@ -7,7 +7,7 @@
 </c:import>
 <div class="main_contents">
     <div id="sub_content">
-        <form:form class="row g-3 mt-3 ms-2" action="/studSearch" method="post" modelAttribute="student">
+        <form:form class="row g-3 mt-3 ms-2" action="/studView/search" method="post" modelAttribute="student">
             <div class="col-auto">
                 <label for="studId" class="visually-hidden">studentID</label>
                 <form:input type="text"  class="form-control" id="studId" placeholder="Student ID" path="id" />
@@ -26,7 +26,10 @@
                 </button>
             </div>
             <div class="col-auto">
-                <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal3">Rest</button>
+                <button type="reset" class="btn btn-danger mb-3" >
+                    Rest
+                </button>
+
                 <!--model-->
                 <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
                      aria-hidden="true">
@@ -73,8 +76,9 @@
                             </c:forEach>
                         </td>
                         <td>
-                            <a href="/studDetail?id=${stud.id}"><button type="submit" class="btn btn-secondary mb-2">See More</button></a>
+                            <a href="${pageContext.request.contextPath}/studDetail?id=${stud.id}"><button type="submit" class="btn btn-secondary mb-2">See More</button></a>
                         </td>
+                        <td></td>
                     </tr>
                 </c:forEach>
 

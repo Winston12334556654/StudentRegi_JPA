@@ -12,7 +12,7 @@
         <div style="color: green">${success}</div>
         <div style="color: red">${disable}</div>
         <div style="color: green">${delSuccess}</div>
-        <form:form class="row g-3 mt-3 ms-2" action="/userSearch" method="post" modelAttribute="user">
+        <form:form class="row g-3 mt-3 ms-2" action="/userView/search" method="post" modelAttribute="user">
             <div class="col-auto">
                 <label for="staticEmail2" class="visually-hidden">User Id</label>
                 <form:input type="text" class="form-control" id="staticEmail2" placeholder="User ID"   path="id"/>
@@ -35,11 +35,11 @@
             </div>
 
             <div class="col-auto">
-                <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal5">Reset</button>
-
-                <!--model-->
-
+                <button type="reset" class="btn btn-danger mb-3" onclick="location.href = '/userView'">
+                    Reset
+                </button>
             </div>
+
         </form:form>
 
         <table class="table table-striped table-hover"  id="stduentTable">
