@@ -35,19 +35,19 @@
                 <a href="/menu"><h3>Student Registration</h3></a>
             </div>
             <div class="col-md-6">
-                <c:if test="${not empty sessionScope.user}">
+                <c:if test="${not empty sessionScope.name}">
 
-                    <p>User: <a href="/userDetail?id=${sessionScope.user.id}" style="text-decoration: none"> ${sessionScope.user.name}  </a> </p>
+                    <p>User: <a href="/userDetail?id=${sessionScope.id}" style="text-decoration: none"> ${sessionScope.name}  </a> </p>
                 </c:if>
 
-                <c:if test="${not empty sessionScope.admin}">
+<%--                <c:if test="${not empty sessionScope.admin}">--%>
 
-                    <p>Admin: <a href="/userDetail?id=${sessionScope.admin.id}" style="text-decoration: none"> ${sessionScope.admin.name}  </a> </p>
-                </c:if>
+<%--                    <p>Admin: <a href="/userDetail?id=${sessionScope.id}" style="text-decoration: none"> ${sessionScope.name}  </a> </p>--%>
+<%--                </c:if>--%>
                 <p>Current Date : <%= date %> </p>
             </div>
 
-            <c:if test="${not empty sessionScope.user}">
+            <c:if test="${not empty sessionScope.name}">
                 <div class="col-md-1" >
                     <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick='location.href="/logout"'>
                 </div>
@@ -56,6 +56,8 @@
     </div>
 
 </div>
+
+<c:if test="${not empty sessionScope.name}">
 <!-- <div id="testsidebar">Hello World </div> -->
 <div class="sidenav">
 
@@ -68,4 +70,5 @@
     </div>
     <a href="/userView">Users Management</a>
 </div>
+</c:if>
 
