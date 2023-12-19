@@ -4,11 +4,26 @@
 <c:import url="/WEB-INF/views/header.jsp" >
     <c:param name="title" value="Student Registration" />
 </c:import>
+<head>
 
 
-<div class="main_contents">
-    <div id="sub_content">
-        <form:form action="/studReg" method="post" modelAttribute="student" enctype="multipart/form-data">
+</head>
+
+
+<%--<button id="button" type="button" class="btn btn-secondary col-md-2" >--%>
+<%--    Student Registrant--%>
+<%--</button>--%>
+
+
+
+<div id ="main_contents" class="main_contents" >
+
+
+
+    <div id="sub_content" >
+
+        <form:form action="/studReg" method="post" modelAttribute="student" enctype="multipart/form-data" >
+
         <h2 class="col-md-6 offset-md-2 mb-5 mt-4">Student Registration</h2>
 
         <div class="row mb-4">
@@ -24,6 +39,7 @@
             <label for="name" class="col-md-2 col-form-label">Name</label>
             <div class="col-md-4">
                 <form:input type="text" class="form-control" id="name" placeholder="Harry" path="name" />
+                <div id="name_errormessage" class="text-danger"  style="color : red"></div>
             </div>
         </div>
 
@@ -32,6 +48,7 @@
             <label for="dob" class="col-md-2 col-form-label">DOB</label>
             <div class="col-md-4">
                 <form:input type="date" class="form-control" id="dob"  path="dob" />
+                <div id="dob_errormessage" class="text-danger"  style="color : red"></div>
             </div>
         </div>
 
@@ -41,7 +58,7 @@
             <div class="col-md-4">
                 <div class="form-check-inline">
                     <form:radiobutton class="form-check-input"   id="option1" value="Male"
-                                      path="gender"/>
+                                      path="gender" checked="checked"/>
                     <label class="form-check-label" for="option1">
                         Male
                     </label>
@@ -52,6 +69,7 @@
                         Female
                     </label>
                 </div>
+                <div id="gender_errormessage" class="text-danger"  style="color : red"></div>
 
             </div>
         </fieldset>
@@ -61,6 +79,7 @@
             <label for="phone" class="col-md-2 col-form-label">Phone</label>
             <div class="col-md-4">
                 <form:input type="text" class="form-control" id="phone" path="phone" />
+                <div id="phone_errormessage" class="text-danger"  style="color : red"></div>
             </div>
         </div>
 
@@ -89,6 +108,7 @@
                     </div>
                 </c:forEach>
             </div>
+            <div id="course_errormessage" class="text-danger"  style="color : red"></div>
         </fieldset>
 
 
@@ -99,6 +119,7 @@
             <label for="photo" class="col-md-2 col-form-label">Photo</label>
             <div class="col-md-4">
                 <form:input type="file" class="form-control" id="photo" path="file" />
+                <div id="photo_errormessage" class="text-danger"  style="color : red"></div>
             </div>
         </div>
 
@@ -153,3 +174,5 @@
 </div>
 </div>
 <jsp:include page="/WEB-INF/views/footer.jsp" />
+
+<script src="${pageContext.request.contextPath}/assets/js/stu_reg.js"></script>

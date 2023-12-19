@@ -61,7 +61,7 @@ public class StudentController {
             student.setPhoto(image); // save image to student object
         }
         int result =  sDao.createStudent(student);
-        return "student/stud_view";
+        return "redirect:/studView";
     }
 
     @GetMapping("/studView")

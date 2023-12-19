@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -49,8 +50,10 @@ public class UserController {
         return "user/user_detail";
     }
     @PostMapping("/userDetail")
-    public String userProfileUpdate(@ModelAttribute("user")User user , Model model){
+    public String userProfileUpdate(@ModelAttribute("user")User user , Model model, HttpSession session){
         int result = userDao.updateUser(user);
+
+        session.setAttribute("name",user.getName());
         return "redirect:/userView";
     }
 

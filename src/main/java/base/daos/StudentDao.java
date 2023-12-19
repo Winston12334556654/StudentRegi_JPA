@@ -54,6 +54,7 @@ public class StudentDao {
             assert entityManager != null;
             entityManager.close();
         }
+
         return students;
     }
 
@@ -277,5 +278,6 @@ public class StudentDao {
         }
         return latestStudentId;
     }
+
 
 }

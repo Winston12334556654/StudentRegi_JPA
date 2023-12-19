@@ -4,6 +4,7 @@ import base.models.User;
 import base.service.JPAUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.persistence.NoResultException;
 import jakarta.persistence.Query;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,34 @@ import java.util.List;
 
 @Component
 public class UserDao {
+
+    //login user validating with typed email and password
+    public boolean login(User user) {
+        EntityManager entityManager = null;
+
+        try {
+            entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+
+            // Use a JPQL query to find a user by email and password
+            Query query = entityManager.createQuery("SELECT u FROM User u WHERE u.email = :email AND u.password = :password");
+            query.setParameter("email", user.getEmail());
+            query.setParameter("password", user.getPassword());
+
+            // Execute the query and get the result
+            User userResult = (User) query.getSingleResult();
+
+            // If the query execution reaches this point, authentication is successful
+            return true;
+
+        } catch (NoResultException e) {
+            // Authentication failed, return false
+            return false;
+        } finally {
+            if (entityManager != null && entityManager.isOpen()) {
+                entityManager.close();
+            }
+        }
+    }
 
 
     //user create method
@@ -234,6 +263,84 @@ public class UserDao {
         }
             return latestUserId;
         }
+
+    // Get role by email
+    public String getRoleByEmail(String email) {
+        EntityManager entityManager = null;
+        try {
+            entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+            Query query = entityManager.createQuery("SELECT u.role FROM User u WHERE u.email = :email");
+            query.setParameter("email", email);
+
+            Object role = query.getSingleResult();
+
+            if (role != null) {
+                return role.toString();
+            } else {
+                throw new EntityNotFoundException("Role not found for email: " + email);
+            }
+        } finally {
+            if (entityManager != null && entityManager.isOpen()) {
+                entityManager.close();
+            }
+        }
+    }
+
+    // Get name by email
+    public String getNameByEmail(String email) {
+        EntityManager entityManager = null;
+        try {
+            entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+            Query query = entityManager.createQuery("SELECT u.name FROM User u WHERE u.email = :email");
+            query.setParameter("email", email);
+
+            Object name = query.getSingleResult();
+
+            if (name != null) {
+                return name.toString();
+            } else {
+                throw new EntityNotFoundException("Name not found for email: " + email);
+            }
+        } finally {
+            if (entityManager != null && entityManager.isOpen()) {
+                entityManager.close();
+            }
+        }
+    }
+    public String getUserIdByEmail(String email) {
+        String userId = null;
+        EntityManager entityManager = null;
+
+        try {
+            entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
+            entityManager.getTransaction().begin();
+
+            // Using JPA query to select user ID by email
+            Query query = entityManager.createQuery("SELECT u.id FROM User u WHERE u.email = :email");
+            query.setParameter("email", email);
+
+            // Execute the query and get the result
+            List<String> userIdList = query.getResultList();
+
+            if (!userIdList.isEmpty()) {
+                userId = userIdList.get(0);
+            }
+
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            System.err.println("Getting user ID by email failed: " + e.getMessage());
+            e.printStackTrace();
+            if (entityManager != null && entityManager.getTransaction().isActive()) {
+                entityManager.getTransaction().rollback();
+            }
+        } finally {
+            if (entityManager != null) {
+                entityManager.close();
+            }
+        }
+
+        return userId;
+    }
 
 
 

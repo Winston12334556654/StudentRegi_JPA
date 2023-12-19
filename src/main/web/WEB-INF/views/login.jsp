@@ -19,7 +19,7 @@
         <div class="login">
             <div class="login-header">
                 <h1>Welcome!</h1>
-                <p style="color: red">${msg}</p>
+                <p id="error" style="color: red">${msg}</p>
             </div>
         </div>
         <form:form class="login-form" action="/login" method="post" modelAttribute="user"  >
