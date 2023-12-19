@@ -60,9 +60,9 @@
                 <div class="col-md-2"></div>
                 <label for="role" class="col-md-2 col-form-label">User Role</label>
                 <div class="col-md-4">
-                    <form:select class="form-select" aria-label="Education" id="role"  path="role">
-                        <form:option value="Admin">Admin</form:option>
-                        <form:option value="User">User</form:option>
+                    <form:select class="form-select" aria-label="Education" id="role"  path="roleName">
+                        <form:option value="ADMIN">Admin</form:option>
+                        <form:option value="USER">User</form:option>
                     </form:select>
                 </div>
             </div>
@@ -96,60 +96,8 @@
     </div>
 </div>
 
-<script>
-    function validateForm() {
-        var nameField = document.getElementById('name');
-        var emailField = document.getElementById('email');
-        var passwordField = document.getElementById('password');
-        var confirmPasswordField = document.getElementById('confirmPassword');
-        var nameErrorMessage = document.getElementById('name-error-message');
-        var emailErrorMessage = document.getElementById('email-error-message');
-        var passwordErrorMessage = document.getElementById('password-error-message');
-        var confirmErrorMessage = document.getElementById('error-message');
+<script src="${pageContext.request.contextPath}/assets/js/user_reg.js"></script>
 
-        // Reset previous error messages
-        nameErrorMessage.innerHTML = '';
-        emailErrorMessage.innerHTML = '';
-        passwordErrorMessage.innerHTML = '';
-        confirmErrorMessage.innerHTML = '';
-
-        // Validate Name
-        if (nameField.value.trim() === '') {
-            nameErrorMessage.innerHTML = 'Name is required!';
-        }
-
-        // Validate email
-        if (emailField.value.trim() === '') {
-            emailErrorMessage.innerHTML = 'Email is required!';
-        }
-
-        // Validate Password
-        if (passwordField.value.length < 6) {
-            passwordErrorMessage.innerHTML = 'Password must be at least 6 characters!';
-        }
-
-        // Validate Confirm Password
-        if (confirmPasswordField.value !== passwordField.value) {
-            confirmErrorMessage.innerHTML = 'Passwords do not match!';
-        }
-
-        // You can add more validations for other fields here if needed
-
-        // Return true only if there are no error messages
-        return nameErrorMessage.innerHTML === ''&& emailErrorMessage.innerHTML === ''  && passwordErrorMessage.innerHTML === '' && confirmErrorMessage.innerHTML === '';
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var form = document.querySelector('form');
-
-        form.addEventListener('submit', function (event) {
-            if (!validateForm()) {
-                // Prevent the form from submitting if validation fails
-                event.preventDefault();
-            }
-        });
-    });
-</script>
 
 
 

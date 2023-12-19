@@ -7,7 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddddbb96-30c7-498b-b9a7-f15a05667d22" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/StudentRegi_JPA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/assets/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/assets/js/user_reg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/assets/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/assets/js/user_reg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/StudRegJpa_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/StudRegJpa_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/daos/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/classes/base/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/user/user_reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StudRegJpa_war_exploded/WEB-INF/views/user/user_reg.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/daos/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/daos/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/views/user/user_reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/WEB-INF/views/user/user_reg.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/StudRegJpa.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/controllers/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/controllers/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/daos/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/models/User.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +52,7 @@
         <option value="Jsp File" />
         <option value="spring-beans.schema" />
         <option value="Tag Library Descriptor" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -53,10 +84,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../corejava-test" />
+    <property name="last_opened_file_path" value="$USER_HOME$/corejava-test" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -82,7 +119,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="TomCat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.78" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="TomCat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="StudRegJpa:war exploded">
@@ -189,8 +227,10 @@
       <workItem from="1702793984603" duration="1244000" />
       <workItem from="1702801090043" duration="138000" />
       <workItem from="1702813463991" duration="5567000" />
-      <workItem from="1702853527951" duration="8767000" />
-      <workItem from="1702884053726" duration="3537000" />
+      <workItem from="1702853527951" duration="7554000" />
+      <workItem from="1702868531467" duration="5318000" />
+      <workItem from="1702880977593" duration="7825000" />
+      <workItem from="1702916051192" duration="12112000" />
     </task>
     <servers />
   </component>

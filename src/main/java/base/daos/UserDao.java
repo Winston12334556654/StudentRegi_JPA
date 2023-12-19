@@ -204,7 +204,6 @@ public class UserDao {
 
 
 
-
     //get user Id
     public String getLatestUserId() {
         String latestUserId = "USR001";
@@ -236,5 +235,7 @@ public class UserDao {
         }
 
 
-
+    public User findByUsername(String username) {
+        return null;
+    }
 }

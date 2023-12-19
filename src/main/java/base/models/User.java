@@ -1,7 +1,6 @@
 package base.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -24,7 +23,15 @@ public class User {
     @Size(min = '6')
     private String password ;
 
-    private String role ;
+    @ManyToOne(fetch=FetchType.LAZY,
+    cascade= { CascadeType.MERGE,
+            CascadeType.DETACH,
+            CascadeType.REFRESH})
+    @JoinColumn(name = "ROLE_ID")
+    private Role role;
+
+    @Transient
+    private String  roleName ;
 
     public String getId() {
         return id;
@@ -58,12 +65,20 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
     public User() {
@@ -77,6 +92,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
+                ", roleName='" + roleName + '\'' +
                 '}';
     }
 }

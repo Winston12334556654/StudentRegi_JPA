@@ -4,16 +4,16 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-
     <!-- Define persistence unit -->
     <persistence-unit name="Student_Registration_SpringJpa">
         <class>base.models.User</class>
         <class>base.models.Course</class>
         <class>base.models.Student</class>
+        <class>base.models.Role</class>
 
         <properties>
             <!-- database connection -->
-            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/demo" />
             <property name="jakarta.persistence.jdbc.user" value="root" />
             <property name="jakarta.persistence.jdbc.password" value="root" />

@@ -1,5 +1,6 @@
 package base.controllers;
 
+import base.daos.RoleDao;
 import base.daos.UserDao;
 import base.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,9 @@ public class UserController {
     @Autowired
     UserDao userDao;
 
+    @Autowired
+    RoleDao roleDao;
+
     @GetMapping("/userReg")
     public String getUserRegForm(Model model){
         User user = new User();
@@ -27,6 +31,10 @@ public class UserController {
     }
     @PostMapping("/userReg")
     public String registerUser(@ModelAttribute("user")User user){
+
+        user.setRole(roleDao.findRoleByName(user.getRoleName()));
+        System.out.println("User Role");
+
         int i = userDao.createUser(user);
         if (i > 0){
             System.out.println("success");
