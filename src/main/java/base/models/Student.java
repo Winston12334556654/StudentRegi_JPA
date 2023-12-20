@@ -28,8 +28,8 @@ public class Student {
 
     //CascadeType.PERSIST
     @ManyToMany(fetch=FetchType.LAZY,
-            cascade= { CascadeType.MERGE,
-                    CascadeType.DETACH, CascadeType.REFRESH})
+            cascade= { CascadeType.MERGE}
+            )
     @JoinTable(
             name="course_student",
             joinColumns=@JoinColumn(name="student_id"),

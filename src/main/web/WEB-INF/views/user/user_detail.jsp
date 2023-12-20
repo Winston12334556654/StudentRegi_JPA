@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-secondary col-md-2 " onclick='location.href = "/user_view"'>
+                    <button type="button" class="btn btn-secondary col-md-2 " onclick='location.href = "/userView"'>
                         Back
                     </button>
                 </div>

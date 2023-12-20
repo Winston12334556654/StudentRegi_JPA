@@ -5,10 +5,13 @@ import base.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -27,14 +30,24 @@ public class UserController {
         return "user/user_reg";
     }
     @PostMapping("/userReg")
-    public String registerUser(@ModelAttribute("user")User user){
-        int i = userDao.createUser(user);
-        if (i > 0){
-            System.out.println("success");
-        }else {
-            System.out.println("fail");
+    public String userRegForm(Model model, @ModelAttribute("user") User user , RedirectAttributes redirect , HttpSession session) {
+
+        User userByEmail=userDao.getUserByEmail(user.getEmail());
+        if(userByEmail !=null){
+            model.addAttribute("msg","This email is already exists.Try another one");
+            return "user/user_reg";
         }
-        return "redirect:/userView";
+        int result = userDao.createUser(user);
+        if (result == 0) {
+            return "user/user_reg";
+        } else {
+            String id = (String) session.getAttribute("id");
+            if (!id.isEmpty()){
+                return "redirect:/userView";
+            }
+            redirect.addFlashAttribute("msg", "Register Success...! Sign in Now . ");
+            return "redirect:/";
+        }
     }
 
     @GetMapping("/userView")
@@ -52,14 +65,17 @@ public class UserController {
     @PostMapping("/userDetail")
     public String userProfileUpdate(@ModelAttribute("user")User user , Model model, HttpSession session){
         int result = userDao.updateUser(user);
-
         session.setAttribute("name",user.getName());
         return "redirect:/userView";
     }
 
     @GetMapping("/userDelete")
-    public String userDelete(@RequestParam("id")String id ){
+    public String userDelete(@RequestParam("id")String id , HttpSession session){
         int result =  userDao.deleteUser(id);
+        String sid = (String) session.getAttribute("id");
+        if (sid.equals(id)){
+            return "redirect:/logout";
+        }
         return "redirect:/userView";
     }
 

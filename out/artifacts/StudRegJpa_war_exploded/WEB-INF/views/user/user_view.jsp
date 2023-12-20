@@ -8,10 +8,7 @@
 
 <div class="main_contents">
     <div id="sub_content">
-        <div style="color: green">${updSuccess}</div>
-        <div style="color: green">${success}</div>
-        <div style="color: red">${disable}</div>
-        <div style="color: green">${delSuccess}</div>
+        <div style="color: green">${msg}</div>
         <form:form class="row g-3 mt-3 ms-2" action="/userView/search" method="post" modelAttribute="user">
             <div class="col-auto">
                 <label for="staticEmail2" class="visually-hidden">User Id</label>
