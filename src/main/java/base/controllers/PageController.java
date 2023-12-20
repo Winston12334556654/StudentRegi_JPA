@@ -8,7 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -23,62 +25,38 @@ public class PageController {
         model.addAttribute("user" , new User());
         return "login";
     }
-
-    //login mehtod
-
     @PostMapping("/login")
-    public String loging(Model model, @ModelAttribute("user")User user, HttpSession session){
+    public String login(@ModelAttribute("user") User user, Model model, HttpServletRequest request, RedirectAttributes red) {
 
+        HttpSession session = request.getSession();
+        String email = user.getEmail();
 
-        //is there any one with this email and password
-        boolean userResult= userDao.login(user);
-        if (!userResult){
+        User userByEmail = new User();
+        userByEmail = userDao.getUserByEmail(email);
+        System.out.println("user" + userByEmail);
+        if (userByEmail != null) {
 
-                model.addAttribute("msg", "User email or password incorrect");
+            if (user.getPassword().equals(userByEmail.getPassword())) {
+                    session.setAttribute("name",userByEmail.getName());
+                    session.setAttribute("id",userByEmail.getId());
+            } else {
+                model.addAttribute("msg", "passwordIncorrect");
                 return "login";
+            }
+            model.addAttribute("msg", "Successful Login");
+            return "menu";
 
-//            return "redirect:/";
         }
-
-
-
-
-        String name= userDao.getNameByEmail(user.getEmail());
-        String role= userDao.getRoleByEmail(user.getEmail());
-//        System.out.print("name   :  "+name );
-//        System.out.print("role   :  "+role );
-//         user.setName(name);
-//         user.setRole(role);
-
-
-        //set session name
-        session.setAttribute("name", name);
-
-
-        //set session role
-        session.setAttribute("role", role);
-        session.setAttribute("id", userDao.getUserIdByEmail(user.getEmail()));
-
-
-
-        System.out.println("heeee     :   " + user.getName());
-
-        model.addAttribute("users",userDao.getAllUsers());
-
-//        model.addAttribute("user",new User());
-        return "user/user_view";
-
-    }
-
-    @GetMapping("/logout")
-    public String logout(Model model, HttpSession session){
-
-        session.invalidate();
+        red.addFlashAttribute("msg", "User not found! You have to registered First!");
         return "redirect:/";
     }
 
 
-
+    @GetMapping("/logout")
+    public String logout(Model model, HttpSession session){
+        session.invalidate();
+        return "redirect:/";
+    }
 
 
 }

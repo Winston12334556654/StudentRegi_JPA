@@ -232,6 +232,24 @@ public class UserDao {
     }
 
 
+    public User getUserByEmail(String email) {
+        User user = null;
+
+        try (EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager()) {
+            // Using JPA query to select a user by email
+            Query query = em.createQuery("SELECT u FROM User u WHERE u.email = :email");
+            query.setParameter("email", email);
+
+            // Execute the query and get the single result
+            user = (User) query.getSingleResult();
+        } catch (Exception e) {
+            System.out.println("Getting user by email failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return user;
+    }
+
 
 
     //get user Id

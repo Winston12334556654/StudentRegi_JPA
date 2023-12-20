@@ -24,7 +24,13 @@ public class CourseController {
         return "course/course_reg";
     }
     @PostMapping("/courseReg")
-    public String courseRegistration(@ModelAttribute ("course") Course course ){
+    public String courseRegistration(@ModelAttribute ("course") Course course , Model model ){
+        String name=course.getName();
+        Course course1=courseDao.getCourseByName(name);
+        if(course1 !=null){
+            model.addAttribute("error","Already exists");
+            return "course/course_reg";
+        }
         int result = courseDao.createCourse(course);
         return "redirect:/courseView";
     }
@@ -47,6 +53,11 @@ public class CourseController {
         return "redirect:/courseView";
     }
 
+    @GetMapping("/courseDelete")
+    public String deletingUser(@RequestParam("id") String id){
+        int resutl = courseDao.deleteCourse(id);
+        return "redirect:/courseView";
+    }
 
 
 

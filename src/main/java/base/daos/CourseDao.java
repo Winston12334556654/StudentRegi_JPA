@@ -129,6 +129,28 @@ public class CourseDao {
         return deleteResult;
     }
 
+    public Course getCourseByName(String name) {
+        Course course = null;
+
+        try (EntityManager em = JPAUtil.getEntityManagerFactory().createEntityManager()) {
+            // Using JPA query to select a course by name
+            Query query = em.createQuery("SELECT c FROM Course c WHERE c.name = :name");
+            query.setParameter("name", name);
+            List<Course> courseList = query.getResultList();
+
+            if (!courseList.isEmpty()) {
+                course = courseList.get(0); // Retrieve the first course from the list
+            } else {
+                System.out.println("Course not found with name: " + name);
+            }
+        } catch (Exception e) {
+            System.out.println("Error retrieving course by name: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return course;
+    }
+
 
 
     //get course Id

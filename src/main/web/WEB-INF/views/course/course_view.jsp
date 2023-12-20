@@ -15,11 +15,7 @@
             <%--                <form:input type="text" class="form-control" id="inputPassword2" placeholder="User Name"  path="" />--%>
             <%--            </div>--%>
 
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-3 " >
-                    Search
-                </button>
-            </div>
+
 
             <div class="col-auto">
                 <button type="button" class="btn btn-secondary " onclick="location.href = '/courseReg'">
@@ -72,7 +68,7 @@
                     </td>
                     <td>
                         <button type="button" class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <a href="/id=${course.id}" style="color: #d6f5e3; text-decoration: none;">Delete</a>
+                            <a href="/courseDelete?id=${course.id}" style="color: #d6f5e3; text-decoration: none;">Delete</a>
                         </button>
                     </td>
                 </tr>
